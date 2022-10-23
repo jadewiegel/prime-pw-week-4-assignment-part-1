@@ -16,10 +16,10 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return a personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return 'Hello Brooke!';
+  return `Hello ${name}!`;
 }
 // Remember to call the function to test
-console.log('Test personalized hello', helloName());
+console.log('Test personalized hello: ', helloName('Brooke'));
 
 //----------------
 
@@ -70,16 +70,28 @@ function getLast( array ) {
   return item.pop();
 }
 console.log('The last item in the array is:', getLast());
+
 //----------------
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
+// let items = ['car', 'boat', 'motorcycle', 'dog'];
+
 function find( value, array ){
-  
+  for (let i = 0; i < array.length; i++){
+   if (value === array[i]){
+    return 'True';
+   }
+  }
+    return 'False';
 }
 
+console.log('Testing using loop:', find(4, [5,3,5,4]));
+
 // ----------------------
+
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
