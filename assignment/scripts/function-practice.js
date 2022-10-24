@@ -35,6 +35,7 @@ console.log('The 2 numbers added together:', addNumbers(2,4));
 //----------------
 
 // 4. Function to multiply three numbers & return the result
+
 function multiplyThree( num1, num2, num3){
   console.log('3 numbers to multiple:', num1, num2, num3);
   let answer = num1 * num2 * num3;
@@ -97,10 +98,15 @@ console.log('Testing using loop:', find(4, [5,3,5,4]));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  let text = string.charAt(0);
+    if (letter === text){
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( 'isFirstLetter - should say false', isFirstLetter('p', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
