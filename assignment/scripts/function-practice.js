@@ -24,10 +24,11 @@ console.log('Test personalized hello: ', helloName('Brooke'));
 //----------------
 
 // 3. Function to add two numbers together & return the result
+let answer = 0;
+
 function addNumbers( firstNumber, secondNumber ) {
   console.log('First Number:', firstNumber, 'Second Number:', secondNumber);
-  let answer = firstNumber + secondNumber;
-  return answer;
+  return answer = firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
 console.log('The 2 numbers added together:', addNumbers(2,4));
@@ -35,11 +36,11 @@ console.log('The 2 numbers added together:', addNumbers(2,4));
 //----------------
 
 // 4. Function to multiply three numbers & return the result
+let answerMult = 0;
 
 function multiplyThree( num1, num2, num3){
-  console.log('3 numbers to multiple:', num1, num2, num3);
-  let answer = num1 * num2 * num3;
-  return answer;
+  console.log('3 numbers to multiply:', num1, num2, num3);
+  return answerMult = num1 * num2 * num3;
 }
 console.log('Multplying the 3 numbers together:', multiplyThree(2, 4, 6));
 
@@ -50,9 +51,9 @@ console.log('Multplying the 3 numbers together:', multiplyThree(2, 4, 6));
 function isPositive( number ) {
   console.log('The number to check:', number);
   if ( number > 0 ){
-    return 'true';
+    return true;
   } else {
-    return 'false';
+    return false;
   }
 }
 // Call the function to test each outcome (true & false) 
@@ -66,9 +67,10 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
+  
   let item = ['car', 'boat', 'motorcycle'];
   console.log('Items in the array:', item);
-  return item.pop();
+  return item[item.length - 1];
 }
 console.log('The last item in the array is:', getLast());
 
@@ -83,10 +85,10 @@ console.log('The last item in the array is:', getLast());
 function find( value, array ){
   for (let i = 0; i < array.length; i++){
    if (value === array[i]){
-    return 'True';
+    return true;
    }
   }
-    return 'False';
+    return false;
 }
 
 console.log('Testing using loop:', find(4, [5,3,5,4]));
